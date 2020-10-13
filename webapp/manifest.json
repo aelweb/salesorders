@@ -101,6 +101,13 @@
 						"master",
 						"object"
 					]
+				},
+				{
+					"name": "Deliveries_binded",
+					"pattern": "Deliveries/{SalesOrderID}",
+					"target": [
+						"Deliveries"
+					]
 				}
 			],
 			"targets": {
@@ -123,6 +130,17 @@
 				"notFound": {
 					"viewName": "NotFound",
 					"viewId": "notFound"
+				},
+				"Deliveries": {
+					"viewType": "XML",
+					"viewName": "Deliveries",
+					"controlAggregation": "midColumnPages"
+				}
+			},
+			"additionalData": {
+				"com.sap.ordersales.view.Deliveries": {
+					"routeName": "Deliveries_binded",
+					"entitySet": "/SalesOrderSet"
 				}
 			}
 		}
